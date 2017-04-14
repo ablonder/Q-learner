@@ -1,0 +1,11 @@
+Aviva Blonder
+Artificial Intelligence
+Homework 4
+
+Of the three action-selection methods I used, epsilon-greedy with epsilon equal to .5 performed the worst. It had the wildest swings in cumulative reward, even as the other two methods leveled off after 80 episodes. Softmax and epsilon-greedy with epsilon equal to .1 performed similarly. In some places softmax varied more and in some places epsilon-greedy varied more. They both leveled off at around 80 episodes with a discounted cumulative reward between -2 and -1.
+
+This asignment was fairly straightforward and enjoyable. As usual, my biggest difficulty was in debugging. I reached a point where the code ran without throwing any exceptions, but the resulting cumulative reward seemed to be stuck a little above -10 and did not appear to be increasing over the course of 100 episodes. I found that the main reason - aside from accidentally overwriting a necessary variable - was my choice of alpha for calculating Q(s, a). Initially, I used 1/n, as had been recommended during lecture. However, I found that giving alpha a constant value of .5 solved the problem.
+
+I spent approximately 6 and a half hours on this assignment.
+
+I affirm that I have adhered to the Honor Code on this assignment.
